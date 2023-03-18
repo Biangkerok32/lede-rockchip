@@ -21,6 +21,19 @@ define U-Boot/Default
   HIDDEN:=1
 endef
 
+# RK3229 boards
+
+define U-Boot/hk1-mini-rk3229
+  BUILD_SUBTARGET:=armv7
+  NAME:=HK1 Mini
+  BUILD_DEVICES:= \
+    friendlyarm_hk1-mini
+  DEPENDS:=+PACKAGE_u-boot-hk1-mini-rk3229:arm-trusted-firmware-rk3229
+  PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
+  ATF:=rk322xh_bl31_v1.49.elf
+  USE_RKBIN:=1
+endef
+
 
 # RK3328 boards
 
