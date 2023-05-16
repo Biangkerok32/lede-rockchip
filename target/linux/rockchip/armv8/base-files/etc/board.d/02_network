@@ -13,6 +13,7 @@ rockchip_setup_interfaces()
 	embedfire,lubancat1|\
 	embedfire,lubancat1n|\
 	embedfire,lubancat2|\
+	hinlink,opc-h66k|\
 	friendlyarm,nanopi-r2c|\
 	friendlyarm,nanopi-r2s|\
 	friendlyarm,nanopi-r4s|\
@@ -20,13 +21,11 @@ rockchip_setup_interfaces()
 	friendlyarm,nanopi-r4se)
 		ucidef_set_interfaces_lan_wan 'eth1' 'eth0'
 		;;
-	firefly,rk3568-roc-pc)
-		ucidef_set_interfaces_lan_wan 'eth0' 'eth1'
-		;;
 	friendlyarm,nanopi-r5s)
 		ucidef_set_interfaces_lan_wan "eth1 eth2" "eth0"
 		;;
 	hinlink,opc-h68k|\
+	hinlink,opc-h69k|\
 	embedfire,lubancat2n)
 		ucidef_set_interfaces_lan_wan "eth1 eth2 eth3" "eth0"
 		;;
@@ -78,8 +77,9 @@ rockchip_setup_macs()
 	embedfire,lubancat1n|\
 	embedfire,lubancat2|\
 	embedfire,lubancat2n|\
+	hinlink,opc-h66k|\
 	hinlink,opc-h68k|\
-	firefly,rk3568-roc-pc|\
+	hinlink,opc-h69k|\
 	friendlyarm,nanopi-r2c|\
 	friendlyarm,nanopi-r2s|\
 	friendlyarm,nanopi-r5c|\
